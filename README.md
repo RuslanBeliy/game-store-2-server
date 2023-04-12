@@ -1,3 +1,9 @@
+## About project  
+  
+
+Server application for - https://github.com/RuslanBeliy/game-store-2-client
+
+
 ## How to run project  
   
 
