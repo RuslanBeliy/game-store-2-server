@@ -6,6 +6,7 @@ import multer from 'multer';
 import { gamesRouter } from './routes/games.js';
 import { authRouter } from './routes/auth.js';
 import { ordersRouter } from './routes/orders.js';
+import { iactiveController } from './controllers/iactiveController.js';
 config();
 
 const PORT = process.env.PORT;
@@ -34,6 +35,7 @@ app.post('/api/upload', upload.single('image'), (req, res) => {
 app.use('/api/auth', authRouter);
 app.use('/api/games', gamesRouter);
 app.use('/api/orders', ordersRouter);
+app.use('/api/iactive', iactiveController.getAll);
 
 mongoose
   .connect(DB_URL)
